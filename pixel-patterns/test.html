@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Tutorial here: https://yuanchuan.dev/pixel-patterns?ref=sidebar -->
+  <script src="https://unpkg.com/css-doodle@0.23.1/css-doodle.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <css-doodle>
+    <style>
+        :doodle {
+          @grid: 3x3 / 97vmin auto;
+          gap: 1.5vmin;
+        }
+        border: 1.2vmin solid #fff;
+        box-shadow: 0 10px 10px -9px #0003;
+        background-color: #f2e9dd;
+        background-size: 100% 100%;
+        background-image: @pn(
+          @pattern(
+            grid: 20;
+            match((int(x+y)%2) == 0) {
+              fill: #6b294b;
+            }
+          ),
+          @pattern(
+            grid: 82;
+            match(((int(x*x*y*y)>>6)%2) == 1) {
+              fill: #ed9045;
+            }
+          ),
+          @pattern(
+            grid: 91;
+            match(((int(x*y*x*y*9.)>>4)&2) == 2) {
+              fill: #9c9fb9;
+            }
+          ),
+          @pattern(
+            grid: 53;
+            match(((int(cos(y)*sin(x)*9.)>>2)&1) != 1) {
+              fill: #f4b51c;
+            }
+          ),
+          @pattern(
+            grid: 83;
+            match(((int(cos(x)*cos(y)*5.)>>2)&1) != 1) {
+              fill: #a29082;
+            }
+          ),
+          @pattern(
+            grid: 80;
+            match((int(x*x + y*y)%80) <= 60) {
+              fill: #8faf1e;
+            }
+          ),
+          @pattern(
+            grid: 70;
+            match((int(x*x*x*x + y*y*y*y)%100) <= 60) {
+              fill: #c895ce;
+            }
+          ),
+          @pattern(
+            grid: 60;
+            match(((int(y*x*y*x)>>4)&2) == 2) {
+              fill: #222636;
+            }
+          ),
+          @pattern(
+            grid: 40;
+            match((int(x+y*x+y)%4) == 0) {
+              fill: #c47678;
+            }
+          )
+        );
+      </style>
+  </css-doodle>
+
+</body>
+</html>
