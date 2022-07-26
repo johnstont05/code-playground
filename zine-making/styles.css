@@ -1,0 +1,18 @@
+@media screen {
+    body {
+      max-width: 30rem;
+      background: #ead1dc;
+      margin: auto;
+    }
+  
+    .zine {
+      background: white;
+      padding: 10px;
+      border-left: 4px solid #741b47;
+      border-bottom: 4px solid #741b47;
+    }
+  
+    .zine-page {
+      margin-top: 10px;
+    }
+  }
